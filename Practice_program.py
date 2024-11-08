@@ -1,12 +1,12 @@
-#Create a program that ask user to input 2 numbers. Print the bigger number.
+#Create a program that ask user to input 2 numbers. Print the lower number.
 
-def bigger_number(firstnumber, secondnumber):
-    highest = firstnumber
+def smaller_number(firstnumber, secondnumber):
+    lowest = firstnumber
 
-    if secondnumber > highest:
-        highest = secondnumber
+    if secondnumber < lowest:
+        lowest = secondnumber
 
-    print("The bigger number is: ",highest)
+    print("The lowest number is: ",lowest)
 
 
 while True:
@@ -22,4 +22,4 @@ while True:
     except:
         print("Input error, try again")
 
-bigger_number(firstnumber, secondnumber)
+smaller_number(firstnumber, secondnumber)
