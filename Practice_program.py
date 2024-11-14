@@ -1,13 +1,14 @@
-#Create a program that ask user to input 2 numbers. Print the lower number.
-
 def smaller_number(firstnumber, secondnumber):
-    lowest = firstnumber
+    if firstnumber < secondnumber:
+        return firstnumber
+    else:
+        return secondnumber
 
-    if secondnumber < lowest:
-        lowest = secondnumber
-
-    print("The lowest number is: ",lowest)
-
+def bigger_number(firstnumber, secondnumber):
+    if firstnumber > secondnumber:
+        return firstnumber
+    else:
+        return secondnumber
 
 while True:
     try:
@@ -22,4 +23,22 @@ while True:
     except:
         print("Input error, try again")
 
-smaller_number(firstnumber, secondnumber)
+if firstnumber == secondnumber:
+    print("Equal")
+    print("The sum of both numbers are: ", firstnumber + secondnumber)
+    print("The difference of both numbers are: 0")
+    print("The product of both numbers are: ", firstnumber * secondnumber)
+    print("The quotient of both numbers are: 1 or 1.0")
+    print("The remainder of both numbers are: 0")
+    print("The result when the first number is raised to the second number: ", secondnumber ** firstnumber)
+else:
+    print("Not Equal")
+    print("The bigger number is: ", bigger_number(firstnumber, secondnumber))
+    print("The lower number is: ", smaller_number(firstnumber, secondnumber))
+    print("The sum of both numbers are: ", firstnumber + secondnumber)
+    print("The difference of both numbers are: ", firstnumber - secondnumber)
+    print("The product of both numbers are: ", firstnumber * secondnumber)
+    print("The quotient of both numbers are: ", firstnumber // secondnumber, "or", firstnumber / secondnumber)
+    print("The remainder of both numbers are: ", firstnumber % secondnumber)
+    print("The result when the first number is raised to the second number: ", secondnumber ** firstnumber)
+
